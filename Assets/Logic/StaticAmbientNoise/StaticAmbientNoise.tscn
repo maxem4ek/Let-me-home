@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxqqjy8t4jlcd"]
+
+[ext_resource type="AudioStream" uid="uid://btqn0y3p24iod" path="res://Assets/Sounds/massive.mp3" id="1_yc68j"]
+[ext_resource type="Script" uid="uid://c81wuq3e0ajy" path="res://Assets/Logic/StaticAmbientNoise/StaticAmbientNoise.gd" id="2_hwb4o"]
+
+[node name="StaticAmbientNoise" type="AudioStreamPlayer"]
+stream = ExtResource("1_yc68j")
+bus = &"AmbientNoise"
+script = ExtResource("2_hwb4o")

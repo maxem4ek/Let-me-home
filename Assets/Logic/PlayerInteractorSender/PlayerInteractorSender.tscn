@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgqbtr6x2o51h"]
+
+[ext_resource type="Script" uid="uid://j2s107spovxl" path="res://Assets/Logic/PlayerInteractorSender/PlayerInteractorSender.gd" id="1_pqijr"]
+
+[node name="PlayerInteractorSender" type="Node"]
+script = ExtResource("1_pqijr")

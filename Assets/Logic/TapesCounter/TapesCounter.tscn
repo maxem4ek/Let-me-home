@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdb4xccaibs6"]
+
+[ext_resource type="Script" uid="uid://bmh4ogdqfkdq8" path="res://Assets/Logic/TapesCounter/TapesCounter.gd" id="1_7xcki"]
+
+[node name="TapesCounter" type="Node"]
+script = ExtResource("1_7xcki")

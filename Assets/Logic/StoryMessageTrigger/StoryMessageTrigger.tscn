@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcc762jian26h"]
+
+[ext_resource type="Script" uid="uid://cd1ino3vbcbch" path="res://Assets/Logic/StoryMessageTrigger/StoryMessageTrigger.gd" id="1_isoqd"]
+
+[node name="StoryMessageTrigger" type="Node"]
+script = ExtResource("1_isoqd")

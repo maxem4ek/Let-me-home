@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwitfr05mjej3"]
+
+[ext_resource type="Script" uid="uid://7c52w4ik2xky" path="res://Assets/Logic/DoorStoryMessageTrigger/DoorStoryMessageTrigger.gd" id="1_ncii8"]
+[ext_resource type="PackedScene" uid="uid://bcc762jian26h" path="res://Assets/Logic/StoryMessageTrigger/StoryMessageTrigger.tscn" id="2_q3sc7"]
+
+[node name="DoorStoryMessageTrigger" type="Node" node_paths=PackedStringArray("story_message_trigger")]
+script = ExtResource("1_ncii8")
+story_message_trigger = NodePath("StoryMessageTrigger")
+
+[node name="StoryMessageTrigger" parent="." instance=ExtResource("2_q3sc7")]

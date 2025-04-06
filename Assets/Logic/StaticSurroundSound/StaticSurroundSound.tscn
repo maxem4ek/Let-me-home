@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://ys4cvdmq56vv"]
+
+[ext_resource type="Script" uid="uid://dkfe1b25u1fn7" path="res://Assets/Logic/StaticSurroundSound/StaticSurroundSound.gd" id="1_8o0jo"]
+
+[node name="StaticSurroundSound" type="AudioStreamPlayer"]
+bus = &"SurrounSound"
+script = ExtResource("1_8o0jo")

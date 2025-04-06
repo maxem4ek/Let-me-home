@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsmec6j8h6iif"]
+
+[ext_resource type="Script" uid="uid://cr7m0ve6ubkcg" path="res://Assets/Entities/StartScreenCamera/StartScreenCamera.gd" id="1_pidh3"]
+
+[node name="StartScreenCamera" type="Camera3D"]
+current = true
+script = ExtResource("1_pidh3")

@@ -1,0 +1,83 @@
+[gd_scene load_steps=17 format=3 uid="uid://bdnoctdymc0n"]
+
+[ext_resource type="PackedScene" uid="uid://dlhlvd3j8swrh" path="res://Assets/Entities/Player/Player.tscn" id="1_kwblh"]
+[ext_resource type="PackedScene" uid="uid://cl84s710p4id3" path="res://Assets/Rooms/GameRooms/GameRooms.tscn" id="2_wkehv"]
+[ext_resource type="PackedScene" uid="uid://dsmec6j8h6iif" path="res://Assets/Entities/StartScreenCamera/StartScreenCamera.tscn" id="3_fxu2d"]
+[ext_resource type="PackedScene" uid="uid://caw7bi7x65wod" path="res://Assets/UI/PlayerUI/PlayerUI.tscn" id="3_gjahs"]
+[ext_resource type="PackedScene" uid="uid://iu2wiiagulju" path="res://Assets/Logic/EsqQuit/EsqQuit.tscn" id="3_ygaiq"]
+[ext_resource type="Script" uid="uid://c1mycm3636dv1" path="res://Assets/UI/PlayerUI/PlayerUI.gd" id="4_g2icf"]
+[ext_resource type="PackedScene" uid="uid://bhpk6kancr3dy" path="res://Assets/UI/EndGameUI/EndGameUI.tscn" id="5_8bicx"]
+[ext_resource type="PackedScene" uid="uid://mna2ab1fvg5u" path="res://Assets/Logic/PlayerMessage/PlayerMessage.tscn" id="5_g2icf"]
+[ext_resource type="PackedScene" uid="uid://cx1f4n1kde6av" path="res://Assets/UI/StartGameUI/StartGameUI.tscn" id="7_fvpbu"]
+[ext_resource type="PackedScene" uid="uid://cxqqjy8t4jlcd" path="res://Assets/Logic/StaticAmbientNoise/StaticAmbientNoise.tscn" id="8_f5dhn"]
+[ext_resource type="PackedScene" uid="uid://ys4cvdmq56vv" path="res://Assets/Logic/StaticSurroundSound/StaticSurroundSound.tscn" id="9_una2h"]
+[ext_resource type="AudioStream" uid="uid://c3s8s0saf05ab" path="res://Assets/Sounds/Surround/sur-001.mp3" id="10_6pypa"]
+[ext_resource type="AudioStream" uid="uid://bn482t38x32ay" path="res://Assets/Sounds/Surround/sur-002.mp3" id="11_s4ycj"]
+[ext_resource type="AudioStream" uid="uid://bd1sadiu7smvg" path="res://Assets/Sounds/Surround/sur-003.mp3" id="12_7n1ip"]
+[ext_resource type="AudioStream" uid="uid://by32r460e6o1j" path="res://Assets/Sounds/Surround/light-sur.mp3" id="13_s4ycj"]
+[ext_resource type="Environment" uid="uid://cfee43vrcqowv" path="res://Assets/Other/Default.tres" id="16_7n1ip"]
+
+[node name="Main" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_kwblh")]
+transform = Transform3D(-0.153899, 0, 0.988086, 0, 1, 0, -0.988086, 0, -0.153899, -8.28434, -1.9259, -7.03627)
+
+[node name="GameRooms" parent="." instance=ExtResource("2_wkehv")]
+
+[node name="StartScreenCamera" parent="." instance=ExtResource("3_fxu2d")]
+transform = Transform3D(-0.690226, 0.0549467, -0.721505, 0, 0.997113, 0.0759359, 0.723594, 0.0524129, -0.688233, 1.41902, 1.40091, 2.04484)
+fov = 59.8
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="StartGameUI" parent="UI" instance=ExtResource("7_fvpbu")]
+mouse_filter = 1
+
+[node name="EndGameUI" parent="UI" instance=ExtResource("5_8bicx")]
+visible = false
+
+[node name="PlayerUI" parent="UI" instance=ExtResource("3_gjahs")]
+mouse_filter = 2
+script = ExtResource("4_g2icf")
+
+[node name="AnimationPlayerStory" parent="UI/PlayerUI/PlayerStoryMessage" index="0"]
+speed_scale = 1.25
+
+[node name="Systems" type="Node" parent="."]
+
+[node name="StaticAmbientNoise" parent="Systems" instance=ExtResource("8_f5dhn")]
+autoplay = true
+
+[node name="StaticSurroundSound" parent="Systems" instance=ExtResource("9_una2h")]
+stream = ExtResource("10_6pypa")
+start_number = 2
+finish_number = 5
+
+[node name="StaticSurroundSound2" parent="Systems" instance=ExtResource("9_una2h")]
+stream = ExtResource("11_s4ycj")
+start_number = 3
+finish_number = 5
+
+[node name="StaticSurroundSound3" parent="Systems" instance=ExtResource("9_una2h")]
+stream = ExtResource("12_7n1ip")
+start_number = 4
+finish_number = 5
+
+[node name="StaticSurroundSoundLight" parent="Systems" instance=ExtResource("9_una2h")]
+stream = ExtResource("13_s4ycj")
+volume_db = 9.455
+start_number = 5
+
+[node name="PlayerMessage" parent="Systems" node_paths=PackedStringArray("story_label", "system_label", "animation_player_story", "animation_player_system") instance=ExtResource("5_g2icf")]
+story_label = NodePath("../../UI/PlayerUI/PlayerStoryMessage")
+system_label = NodePath("../../UI/PlayerUI/PlayerSystemMessage")
+animation_player_story = NodePath("../../UI/PlayerUI/PlayerStoryMessage/AnimationPlayerStory")
+animation_player_system = NodePath("../../UI/PlayerUI/PlayerSystemMessage/AnimationPlayerSystem")
+
+[node name="EsqQuit" parent="Systems" instance=ExtResource("3_ygaiq")]
+enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Systems"]
+environment = ExtResource("16_7n1ip")
+
+[editable path="UI/PlayerUI"]

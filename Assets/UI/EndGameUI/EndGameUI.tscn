@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhpk6kancr3dy"]
+
+[ext_resource type="Theme" uid="uid://d2jv5gwu4lwya" path="res://Assets/Other/BaseTheme.tres" id="1_unl6e"]
+[ext_resource type="Script" uid="uid://h80uqviuq0q0" path="res://Assets/UI/EndGameUI/EndGameUI.gd" id="2_h2ufs"]
+
+[node name="EndGameUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_unl6e")
+script = ExtResource("2_h2ufs")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.585062, 0.585062, 0.585062, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 63
+text = "Thanks for playing!
+LUDUM DARE 57
+maxem4ek"
+horizontal_alignment = 1
+vertical_alignment = 1

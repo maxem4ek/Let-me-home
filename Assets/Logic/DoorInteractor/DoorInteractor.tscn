@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ihub67rbny0w"]
+
+[ext_resource type="Script" uid="uid://dmw4lksdy7p1a" path="res://Assets/Logic/DoorInteractor/DoorInteractor.gd" id="1_p5jti"]
+
+[node name="DoorInteractor" type="Node"]
+script = ExtResource("1_p5jti")

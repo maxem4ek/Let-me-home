@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://c8pqif2vbphro"]
+
+[ext_resource type="Script" uid="uid://bdfda8ocy8fra" path="res://Assets/Entities/TeleportBox/TeleportBox.gd" id="1_mg6wo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mg6wo"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_mg6wo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mg6wo"]
+albedo_color = Color(0.225055, 0.331158, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_oq6hg"]
+size = Vector3(1, 0.1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kxdeg"]
+albedo_color = Color(2.0624e-05, 0.145364, 0.468147, 1)
+
+[node name="TeleportBox" type="Node3D" node_paths=PackedStringArray("target_point", "area3d", "placeholder_mesh")]
+script = ExtResource("1_mg6wo")
+target_point = NodePath("TeleportOut")
+area3d = NodePath("TeleportIn")
+placeholder_mesh = NodePath("TeleportIn/MeshInstance3D")
+
+[node name="TeleportIn" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TeleportIn"]
+shape = SubResource("BoxShape3D_mg6wo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TeleportIn"]
+mesh = SubResource("BoxMesh_mg6wo")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_mg6wo")
+
+[node name="Label3D" type="Label3D" parent="TeleportIn/MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.593292, 0)
+billboard = 1
+text = "Teleport IN"
+
+[node name="TeleportOut" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 3.50788)
+mesh = SubResource("BoxMesh_mg6wo")
+surface_material_override/0 = SubResource("StandardMaterial3D_mg6wo")
+
+[node name="Label3D" type="Label3D" parent="TeleportOut"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.593292, 0)
+billboard = 1
+text = "Teleport Out"
+
+[node name="MeshInstanceOut2" type="MeshInstance3D" parent="TeleportOut"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0718282, 0, -0.925656)
+mesh = SubResource("BoxMesh_oq6hg")
+surface_material_override/0 = SubResource("StandardMaterial3D_kxdeg")

@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=4 uid="uid://kyjg8no78u1j"]
+
+[ext_resource type="Texture2D" uid="uid://ds1uw2tatha66" path="res://Assets/Textures/export_CasseteTexture.webp" id="1_urh50"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4e7fi"]
+resource_name = "Casset"
+cull_mode = 2
+albedo_texture = ExtResource("1_urh50")
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qg0tg"]
+_surfaces = [{
+"aabb": AABB(-0.391378, -0.0825817, -0.258745, 0.782755, 0.165164, 0.517489),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAwACAAEAAAACAAQAAwAEAAIAAAAEAAUABgAEAAMABgAFAAQABwADAAEABwAGAAMAAAAHAAEABwAFAAYABwAAAAUA"),
+"name": "Casset",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAA/////wAAAAD///////8AAP//AAD//wAA//8AAAAAAAAAAAAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_p3a6o"]
+resource_name = "export_Cube_010"
+_surfaces = [{
+"aabb": AABB(-0.391378, -0.0825817, -0.258745, 0.782755, 0.165164, 0.517489),
+"attribute_data": PackedByteArray("ydM0+mj4Lewr1D3pBvgk/aL6Ge4k3nD7ovpw+yTeGe5S38P19PlY6nPfWunT+cD2//9f/9KAsX/SgF////+xf/////8qgFGAfoD//6r/UYDCyIGR5rKLmfqy1JCvyDea"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_4e7fi"),
+"name": "Casset",
+"primitive": 3,
+"uv_scale": Vector4(1.52144, 0.802685, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP//lwEAAP//AACXAQAA/////5cBAAAAAAAAlwEAAAAAAAAAAP////8AAAAAAAD//wAAAAD//wAAAAAAAP//AAAAALsA////////uwD/////AAC7AP//AAD//7sAAAAAAAAAAAD//wAA//8AAP//AAAAAAAAAAAAAP//AAD/////AAD/PwAA//////8/AAD//wAA/z//////////PwAAAAD//1T/////////VP///wAA//9U/wAA/////1T/QP7ewED+3sBA/t7AQP7ewP9/////f////3////9////PAJg/zwCYP88AmD/PAJg//3//P/9//z//f/8//3//P////3////9/////f////3//f/9//3//f/9//3//f/9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_qg0tg")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_urh50"]
+data = PackedVector3Array(-0.3914, -0.0826, 0.2587, -0.3914, 0.0826, -0.2587, -0.3914, 0.0826, 0.2587, -0.3914, -0.0826, 0.2587, -0.3914, -0.0826, -0.2587, -0.3914, 0.0826, -0.2587, -0.3914, -0.0826, -0.2587, 0.3914, 0.0826, -0.2587, -0.3914, 0.0826, -0.2587, -0.3914, -0.0826, -0.2587, 0.3914, -0.0826, -0.2587, 0.3914, 0.0826, -0.2587, 0.3914, -0.0826, -0.2587, 0.3914, 0.0826, 0.2587, 0.3914, 0.0826, -0.2587, 0.3914, -0.0826, -0.2587, 0.3914, -0.0826, 0.2587, 0.3914, 0.0826, 0.2587, -0.3914, -0.0826, -0.2587, 0.3914, -0.0826, 0.2587, 0.3914, -0.0826, -0.2587, -0.3914, -0.0826, -0.2587, -0.3914, -0.0826, 0.2587, 0.3914, -0.0826, 0.2587, 0.3914, 0.0826, -0.2587, -0.3914, 0.0826, 0.2587, -0.3914, 0.0826, -0.2587, 0.3914, 0.0826, -0.2587, 0.3914, 0.0826, 0.2587, -0.3914, 0.0826, 0.2587, -0.3914, -0.0826, 0.2587, 0.3914, 0.0826, 0.2587, 0.3914, -0.0826, 0.2587, -0.3914, -0.0826, 0.2587, -0.3914, 0.0826, 0.2587, 0.3914, 0.0826, 0.2587)
+
+[node name="Casset" type="Node3D"]
+
+[node name="Casset" type="MeshInstance3D" parent="."]
+transform = Transform3D(0, 0, 0.418655, 0, 0.418655, 0, -0.418655, 0, 0, 0, 0, 0)
+mesh = SubResource("ArrayMesh_p3a6o")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Casset"]
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Casset/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_urh50")
+debug_fill = false

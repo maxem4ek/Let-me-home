@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://dg266ihlutqhu"]
+
+[ext_resource type="PackedScene" uid="uid://kokvv53xnxps" path="res://Assets/Entities/CassetCase/CassetCase.tscn" id="1_kcske"]
+[ext_resource type="Script" uid="uid://d1mume3gd3nv1" path="res://Assets/Entities/StoryCasset/StoryCasset.gd" id="2_42toa"]
+[ext_resource type="Texture2D" uid="uid://b01w5hti37waf" path="res://Assets/Textures/CasesPicture.png" id="2_rsyu7"]
+[ext_resource type="PackedScene" uid="uid://cnpfpl65eg3ba" path="res://Assets/Logic/InteractorReceiver/InteractorReceiver.tscn" id="3_42toa"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4offl"]
+size = Vector3(0.297607, 0.0841064, 0.430511)
+
+[node name="StoryCasset" node_paths=PackedStringArray("interactor_receiver") instance=ExtResource("1_kcske")]
+script = ExtResource("2_42toa")
+interactor_receiver = NodePath("InteractorReceiver")
+
+[node name="Sprite3D" type="Sprite3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.0380574, 0)
+pixel_size = 0.005
+texture = ExtResource("2_rsyu7")
+hframes = 16
+vframes = 8
+
+[node name="InteractorReceiver" parent="." index="2" instance=ExtResource("3_42toa")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractorReceiver" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00280762, -0.000549316, 0.00376892)
+shape = SubResource("BoxShape3D_4offl")

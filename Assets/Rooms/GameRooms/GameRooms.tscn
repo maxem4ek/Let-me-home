@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=3 uid="uid://cl84s710p4id3"]
+
+[ext_resource type="PackedScene" uid="uid://0ugxljava5uy" path="res://Assets/Rooms/Room1/Room1.tscn" id="1_45nq7"]
+[ext_resource type="PackedScene" uid="uid://dd6d2dt8lg6vx" path="res://Assets/Rooms/Room2/Room2.tscn" id="2_rswec"]
+[ext_resource type="PackedScene" uid="uid://g8idb4i1vf1k" path="res://Assets/Rooms/Room3/Room3.tscn" id="3_besrs"]
+[ext_resource type="PackedScene" uid="uid://c8pqif2vbphro" path="res://Assets/Entities/TeleportBox/TeleportBox.tscn" id="3_rswec"]
+[ext_resource type="PackedScene" uid="uid://ddag77tevxxln" path="res://Assets/Rooms/Room4/Room4.tscn" id="4_b2bbn"]
+[ext_resource type="PackedScene" uid="uid://cj25jaham6kd3" path="res://Assets/Rooms/Room5/Room5.tscn" id="5_ran3c"]
+[ext_resource type="PackedScene" uid="uid://djndxruaymo0d" path="res://Assets/Entities/Roof/Roof.tscn" id="5_sp5qx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sp5qx"]
+size = Vector3(1, 19.9438, 20.176)
+
+[node name="GameRooms" type="Node3D"]
+
+[node name="Rooms" type="Node3D" parent="."]
+
+[node name="Room1" parent="Rooms" instance=ExtResource("1_45nq7")]
+
+[node name="Room2" parent="Rooms" instance=ExtResource("2_rswec")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -16.8761, 0, 1.96838)
+
+[node name="Room3" parent="Rooms" instance=ExtResource("3_besrs")]
+transform = Transform3D(4.37114e-08, 1, 3.82137e-15, 1, -4.37114e-08, 8.74228e-08, 8.74228e-08, 0, -1, -21.629, -7.123, -20.915)
+
+[node name="Room4" parent="Rooms" instance=ExtResource("4_b2bbn")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -25.415, -8.857, -36.835)
+
+[node name="Room5" parent="Rooms" instance=ExtResource("5_ran3c")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -43.394, -8.854, -24.764)
+
+[node name="Teleports" type="Node3D" parent="."]
+
+[node name="TeleportBox" parent="Teleports" instance=ExtResource("3_rswec")]
+
+[node name="TeleportIn" parent="Teleports/TeleportBox" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.6373, -0.922433, -2.02917)
+
+[node name="TeleportOut" parent="Teleports/TeleportBox" index="1"]
+transform = Transform3D(1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, 1, -7.88892, -1.84354, 0.29278)
+
+[node name="Roofs" type="Node3D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="Roof" parent="Roofs" instance=ExtResource("5_sp5qx")]
+transform = Transform3D(-0.998562, 1.50779e-07, 0, -1.50779e-07, -0.998562, 0, 0, 0, 0.998562, -8.75595, 2.84431, 0.862247)
+
+[node name="Roof2" parent="Roofs" instance=ExtResource("5_sp5qx")]
+transform = Transform3D(-6.21155e-08, -0.998562, 0, 0.57898, -1.0713e-07, 0, 0, 0, 0.810112, -18.7317, -8.31294, -21.7568)
+
+[node name="Roof3" parent="Roofs" instance=ExtResource("5_sp5qx")]
+transform = Transform3D(-0.57898, 1.50779e-07, 0, -8.74235e-08, -0.998562, 0, 0, 0, 0.576837, -24.7536, -5.69368, -39.0973)
+
+[node name="Roof4" parent="Roofs" instance=ExtResource("5_sp5qx")]
+transform = Transform3D(-0.31567, 1.50779e-07, 0, -4.76648e-08, -0.998562, 0, 0, 0, 0.301785, -29.1995, -5.68561, -28.1526)
+
+[node name="Colliders" type="Node3D" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Colliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.2178, 1.48863, -12.3712)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Colliders/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.47192, -9.58801)
+shape = SubResource("BoxShape3D_sp5qx")
+
+[editable path="Teleports/TeleportBox"]

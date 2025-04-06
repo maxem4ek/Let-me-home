@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://44qsxwdc6wu2"]
+
+[ext_resource type="Script" uid="uid://cf64qivptx8ae" path="res://Assets/Logic/FirstPersonMove/FirstPersonMove.gd" id="1_hmdwc"]
+
+[node name="FirstPersonMove" type="Node"]
+script = ExtResource("1_hmdwc")

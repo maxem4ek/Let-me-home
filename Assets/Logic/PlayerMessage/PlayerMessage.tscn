@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://mna2ab1fvg5u"]
+
+[ext_resource type="Script" uid="uid://nv1l2gpc01la" path="res://Assets/Logic/PlayerMessage/PlayerMessage.gd" id="1_ctoq4"]
+
+[node name="PlayerMessage" type="Node"]
+script = ExtResource("1_ctoq4")

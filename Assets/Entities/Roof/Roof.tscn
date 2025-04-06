@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://djndxruaymo0d"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_wkehv"]
+size = Vector2(36, 25)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wkehv"]
+albedo_color = Color(0.4053, 0.42, 0.273, 1)
+
+[node name="Roof" type="MeshInstance3D"]
+transform = Transform3D(-1, 0, 0, 0, -1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("PlaneMesh_wkehv")
+surface_material_override/0 = SubResource("StandardMaterial3D_wkehv")

@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://dj7w5vsrm0nep"]
+
+[ext_resource type="Script" uid="uid://ldt38v2wt7ba" path="res://Assets/Logic/StepSoundsPlayer/StepSoundsPlayer.gd" id="1_puv7e"]
+[ext_resource type="AudioStream" uid="uid://c8xlds1mrl43o" path="res://Assets/Sounds/Steps/step-001.mp3" id="2_vho0b"]
+[ext_resource type="AudioStream" uid="uid://du4tyn56d584b" path="res://Assets/Sounds/Steps/step-002.mp3" id="3_mdn0q"]
+[ext_resource type="AudioStream" uid="uid://nyd53ost3l02" path="res://Assets/Sounds/Steps/step-004.mp3" id="5_ruvqd"]
+
+[node name="StepSoundsPlayer" type="AudioStreamPlayer3D" node_paths=PackedStringArray("timer")]
+attenuation_model = 3
+pitch_scale = 0.61
+max_polyphony = 4
+script = ExtResource("1_puv7e")
+sounds = Array[AudioStream]([ExtResource("2_vho0b"), ExtResource("3_mdn0q"), ExtResource("5_ruvqd")])
+timer = NodePath("Timer")
+
+[node name="Timer" type="Timer" parent="."]

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cg3wnf2lafnd2"]
+
+[ext_resource type="Script" uid="uid://dbriqtabqm56c" path="res://Assets/Entities/StaticMessageTrigger/StaticMessageTrigger.gd" id="1_nb3o8"]
+[ext_resource type="PackedScene" uid="uid://bcc762jian26h" path="res://Assets/Logic/StoryMessageTrigger/StoryMessageTrigger.tscn" id="2_ay35w"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_isoqd"]
+size = Vector3(3, 3, 3)
+
+[node name="StaticMessageTrigger" type="Node3D" node_paths=PackedStringArray("area3D", "story_message_trigger")]
+script = ExtResource("1_nb3o8")
+area3D = NodePath("Area3D")
+story_message_trigger = NodePath("StoryMessageTrigger")
+
+[node name="Area3D" type="Area3D" parent="."]
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0127029, -9.53674e-07, -0.0172615)
+shape = SubResource("BoxShape3D_isoqd")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="StoryMessageTrigger" parent="." instance=ExtResource("2_ay35w")]

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://01xs7e2bda3a"]
+
+[ext_resource type="Script" uid="uid://cq7k8wlr6kw0f" path="res://Assets/Entities/EndGameTrigger/EndGameTrigger.gd" id="1_aqb8r"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bchfg"]
+size = Vector3(3, 3, 3)
+
+[node name="EndGameTrigger" type="Node3D" node_paths=PackedStringArray("area3D")]
+script = ExtResource("1_aqb8r")
+area3D = NodePath("Area3D")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_bchfg")
+debug_color = Color(1, 1, 1, 1)

@@ -1,0 +1,255 @@
+[gd_scene load_steps=20 format=3 uid="uid://g8idb4i1vf1k"]
+
+[ext_resource type="PackedScene" uid="uid://dvwhoo2okq428" path="res://Assets/Rooms/RoomBase/RoomBase.tscn" id="1_6402w"]
+[ext_resource type="PackedScene" uid="uid://dstlnpjgx3gen" path="res://Assets/Entities/WashingMachine/WashingMachine.tscn" id="2_6vrak"]
+[ext_resource type="PackedScene" uid="uid://8tue723wmjxp" path="res://Assets/Entities/KitchenBoxDown/KitchenBoxDown.tscn" id="3_t6yu6"]
+[ext_resource type="PackedScene" uid="uid://kyjg8no78u1j" path="res://Assets/Entities/Casset/Casset.tscn" id="4_vfq1v"]
+[ext_resource type="PackedScene" uid="uid://kokvv53xnxps" path="res://Assets/Entities/CassetCase/CassetCase.tscn" id="5_huofu"]
+[ext_resource type="PackedScene" uid="uid://bb6gg5c0i68g8" path="res://Assets/Entities/Bed/Bed.tscn" id="6_3m5ms"]
+[ext_resource type="PackedScene" uid="uid://blou40e38qo4c" path="res://Assets/Entities/Monitor/Monitor.tscn" id="7_xspvw"]
+[ext_resource type="PackedScene" uid="uid://bk172pq8hanu5" path="res://Assets/Entities/Table/Table.tscn" id="8_i1ulm"]
+[ext_resource type="PackedScene" uid="uid://mid86nu1dxxv" path="res://Assets/Entities/VideoPlayer/VideoPlayer.tscn" id="9_vqc8f"]
+[ext_resource type="PackedScene" uid="uid://mwgdrn5r6kck" path="res://Assets/Entities/Chair/Chair.tscn" id="10_hv2ud"]
+[ext_resource type="PackedScene" uid="uid://b75xv4elrcvi8" path="res://Assets/Entities/BoxBig/BoxBig.tscn" id="11_owimu"]
+[ext_resource type="PackedScene" uid="uid://btvpr1yiwnvw1" path="res://Assets/Entities/Door/Door.tscn" id="13_am1dw"]
+[ext_resource type="PackedScene" uid="uid://bc7mqpdlui8qg" path="res://Assets/Entities/Oven/Oven.tscn" id="14_lpxug"]
+[ext_resource type="PackedScene" uid="uid://crs4lfey0ovjw" path="res://Assets/Entities/BoxSmall/BoxSmall.tscn" id="15_vkm1b"]
+[ext_resource type="PackedScene" uid="uid://bwjb1kl5h3hu6" path="res://Assets/Entities/BoxMedium/BoxMedium.tscn" id="16_ipw43"]
+[ext_resource type="PackedScene" uid="uid://bw4x02jc52at6" path="res://Assets/Entities/KitchenBoxUp/KitchenBoxUp.tscn" id="17_nyigl"]
+[ext_resource type="PackedScene" uid="uid://cg3wnf2lafnd2" path="res://Assets/Entities/StaticMessageTrigger/StaticMessageTrigger.tscn" id="18_3sqbc"]
+[ext_resource type="PackedScene" uid="uid://dg266ihlutqhu" path="res://Assets/Entities/StoryCasset/StoryCasset.tscn" id="18_yy0pg"]
+[ext_resource type="PackedScene" uid="uid://dwitfr05mjej3" path="res://Assets/Logic/DoorStoryMessageTrigger/DoorStoryMessageTrigger.tscn" id="19_3sqbc"]
+
+[node name="Room3" instance=ExtResource("1_6402w")]
+
+[node name="WallHider5" parent="WallHiders" index="4"]
+visible = false
+
+[node name="WallHider10" parent="WallHiders" index="10"]
+visible = false
+
+[node name="Entities" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000768661, -0.0268621, -0.0159626)
+
+[node name="WashingMachine" parent="Entities" index="0" instance=ExtResource("2_6vrak")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.52816, -1.21061, 0.357345)
+
+[node name="KitchenBoxDown" parent="Entities" index="1" instance=ExtResource("3_t6yu6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.80628, -1.20402, 0.344131)
+
+[node name="KitchenBoxDown2" parent="Entities" index="2" instance=ExtResource("3_t6yu6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.06699, -1.20402, 0.388328)
+
+[node name="KitchenBoxDown3" parent="Entities" index="3" instance=ExtResource("3_t6yu6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10.338, -1.20402, 0.226523)
+
+[node name="Casset" parent="Entities" index="4" instance=ExtResource("4_vfq1v")]
+transform = Transform3D(0.499996, -0.00390953, 0.866019, 0.00195476, 0.999992, 0.00338575, -0.866025, 0, 0.5, -8.14404, -1.88207, -0.905334)
+
+[node name="Casset2" parent="Entities" index="5" instance=ExtResource("4_vfq1v")]
+transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, -10.4339, -0.439674, 0.451575)
+
+[node name="Casset3" parent="Entities" index="6" instance=ExtResource("4_vfq1v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.99311, -1.86452, -0.924255)
+
+[node name="Casset4" parent="Entities" index="7" instance=ExtResource("4_vfq1v")]
+transform = Transform3D(-0.63253, 0, 0.774536, 0, 1, 0, -0.774536, 0, -0.63253, -9.17759, -0.439674, 0.727208)
+
+[node name="CassetCase" parent="Entities" index="8" instance=ExtResource("5_huofu")]
+transform = Transform3D(0.118315, -0.00121078, 0.992975, 0.001305, 0.999999, 0.00106386, -0.992975, 0.00116997, 0.118317, -7.81281, -0.437904, 0.475618)
+
+[node name="CassetCase2" parent="Entities" index="9" instance=ExtResource("5_huofu")]
+transform = Transform3D(0.0954983, 0, 0.99543, 0, 1, 0, -0.99543, 0, 0.0954983, -9.9058, -0.437904, 0.57162)
+
+[node name="Bed" parent="Entities" index="10" instance=ExtResource("6_3m5ms")]
+transform = Transform3D(0.403541, -0.914953, 0.00402871, -0.009983, -4.37114e-08, 0.99995, -0.914907, -0.403561, -0.00913399, -4.03255, -0.71535, -6.76093)
+
+[node name="Bed2" parent="Entities" index="11" instance=ExtResource("6_3m5ms")]
+transform = Transform3D(0.403541, -0.914953, 0.00402871, -0.009983, -4.37114e-08, 0.99995, -0.914907, -0.403561, -0.00913399, -4.03255, 1.70211, -6.76093)
+
+[node name="Monitor" parent="Entities" index="12" instance=ExtResource("7_xspvw")]
+transform = Transform3D(0.0362771, 0, -0.999342, 0, 1, 0, 0.999342, 0, 0.0362771, -4.38488, -0.141354, -1.02345)
+
+[node name="Table" parent="Entities" index="13" instance=ExtResource("8_i1ulm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.35079, -0.689221, -0.836116)
+
+[node name="VideoPlayer" parent="Entities" index="14" instance=ExtResource("9_vqc8f")]
+transform = Transform3D(0.00109692, -0.999999, -0.00101061, -0.999979, -0.00110336, 0.00638591, -0.00638692, 0.00100353, -0.999979, -4.83801, -0.0282985, -0.850809)
+
+[node name="Chair" parent="Entities" index="15" instance=ExtResource("10_hv2ud")]
+transform = Transform3D(0.628004, 0.77821, -3.40167e-08, 0, -4.37114e-08, -1, -0.77821, 0.628004, -2.74509e-08, -3.68328, -1.6048, -6.90018)
+
+[node name="Chair2" parent="Entities" index="16" instance=ExtResource("10_hv2ud")]
+transform = Transform3D(0.928932, 0.370249, 1.61841e-08, 0, -4.37114e-08, 1, 0.370249, -0.928932, -4.06049e-08, -1.44905, -1.59439, -1.57741)
+
+[node name="BoxBig" parent="Entities" index="17" instance=ExtResource("11_owimu")]
+transform = Transform3D(0.93166, 0, 0.363333, 0, 1, 0, -0.363333, 0, 0.93166, -0.434122, -1.3996, -1.01396)
+
+[node name="BoxBig3" parent="Entities" index="18" instance=ExtResource("11_owimu")]
+transform = Transform3D(0.691992, 0, 0.721905, 0, 1, 0, -0.721905, 0, 0.691992, -3.85077, -1.29435, -4.36146)
+
+[node name="CassetCase5" parent="Entities" index="19" instance=ExtResource("5_huofu")]
+transform = Transform3D(0.534869, 0, -0.844935, 0, 1, 0, 0.844935, 0, 0.534869, -3.91428, -1.87059, -7.67768)
+
+[node name="CassetCase7" parent="Entities" index="20" instance=ExtResource("5_huofu")]
+transform = Transform3D(0.953027, 0, -0.302886, 0, 1, 0, 0.302886, 0, 0.953027, -4.77445, -1.87059, -4.84833)
+
+[node name="CassetCase8" parent="Entities" index="21" instance=ExtResource("5_huofu")]
+transform = Transform3D(0.931317, 0, 0.36421, 0, 1, 0, -0.36421, 0, 0.931317, 0.288964, -1.87059, -1.10954)
+
+[node name="CassetCase9" parent="Entities" index="22" instance=ExtResource("5_huofu")]
+transform = Transform3D(-0.597849, 0, 0.801609, 0, 1, 0, -0.801609, 0, -0.597849, -4.76621, -1.87059, -1.88674)
+
+[node name="CassetCase10" parent="Entities" index="23" instance=ExtResource("5_huofu")]
+transform = Transform3D(0.919931, 0, 0.39208, 0, 1, 0, -0.39208, 0, 0.919931, 0.458132, -1.87059, -1.29448)
+
+[node name="Door" parent="Entities" index="24" instance=ExtResource("13_am1dw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9124, -0.46971, -6.96501)
+
+[node name="Door2" parent="Entities" index="25" instance=ExtResource("13_am1dw")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.87859, -0.443665, 10.9045)
+
+[node name="Oven" parent="Entities" index="26" instance=ExtResource("14_lpxug")]
+transform = Transform3D(0.000384682, -0.000476933, 1, -0.000138937, 1, 0.000476982, -1, -0.000139103, 0.000384622, 5.96799, -1.20402, 10.412)
+
+[node name="KitchenBoxDown4" parent="Entities" index="27" instance=ExtResource("3_t6yu6")]
+transform = Transform3D(1.62921e-07, 0, 1, 0, 1, 0, -1, 0, 1.62921e-07, 7.25961, -1.17716, 10.3636)
+
+[node name="KitchenBoxDown5" parent="Entities" index="28" instance=ExtResource("3_t6yu6")]
+transform = Transform3D(-1, 0, 1.1921e-07, 0, 1, 0, -1.1921e-07, 0, -1, 8.48213, -1.17716, 1.6593)
+
+[node name="KitchenBoxDown6" parent="Entities" index="29" instance=ExtResource("3_t6yu6")]
+transform = Transform3D(-1, 0, 1.1921e-07, 0, 1, 0, -1.1921e-07, 0, -1, 8.48213, -1.17716, 2.92073)
+
+[node name="KitchenBoxDown7" parent="Entities" index="30" instance=ExtResource("3_t6yu6")]
+transform = Transform3D(-1, 0, 1.1921e-07, 0, 1, 0, -1.1921e-07, 0, -1, 8.48213, -1.17717, 4.21713)
+
+[node name="KitchenBoxDown8" parent="Entities" index="31" instance=ExtResource("3_t6yu6")]
+transform = Transform3D(-1, 0, 1.1921e-07, -4.90415e-08, 0.911461, -0.411387, -1.08655e-07, -0.411387, -0.911461, -0.615617, -0.348718, 5.52758)
+locked = false
+
+[node name="Table2" parent="Entities" index="32" instance=ExtResource("8_i1ulm")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.25618, -0.689222, 6.36713)
+
+[node name="Table3" parent="Entities" index="33" instance=ExtResource("8_i1ulm")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.25618, -0.689222, 9.42239)
+
+[node name="VideoPlayer2" parent="Entities" index="34" instance=ExtResource("9_vqc8f")]
+transform = Transform3D(0.608665, 0, -0.793428, 0, 1, 0, 0.793428, 0, 0.608665, -4.36163, -0.396879, 8.96138)
+
+[node name="VideoPlayer3" parent="Entities" index="35" instance=ExtResource("9_vqc8f")]
+transform = Transform3D(0.202343, 0, -0.979315, 0, 1, 0, 0.979315, 0, 0.202343, -4.36163, -0.169684, 8.96138)
+
+[node name="VideoPlayer4" parent="Entities" index="36" instance=ExtResource("9_vqc8f")]
+transform = Transform3D(0.735471, 0, -0.677557, 0, 1, 0, 0.677557, 0, 0.735471, -4.36163, 0.0341088, 8.96138)
+
+[node name="Monitor2" parent="Entities" index="37" instance=ExtResource("7_xspvw")]
+transform = Transform3D(0.21436, 0, -0.976755, 0, 1, 0, 0.976755, 0, 0.21436, -4.28018, -0.131856, 6.06187)
+
+[node name="Monitor3" parent="Entities" index="38" instance=ExtResource("7_xspvw")]
+transform = Transform3D(-0.101077, 0.9744, 0.200818, 0.0141019, -0.200429, 0.979607, 0.994779, 0.101847, 0.00651771, -4.07734, -0.133905, 7.49584)
+
+[node name="BoxBig7" parent="Entities" index="39" instance=ExtResource("11_owimu")]
+transform = Transform3D(0.846209, -0.21494, 0.487576, 0.186237, 0.976627, 0.107308, -0.499244, 0, 0.866461, 3.14564, -0.55035, 7.37627)
+
+[node name="BoxBig8" parent="Entities" index="40" instance=ExtResource("11_owimu")]
+transform = Transform3D(0.975308, 0, -0.220851, -0.0570823, 0.966021, -0.252083, 0.213347, 0.258465, 0.942168, 1.23311, -0.0753145, 8.29352)
+
+[node name="BoxSmall" parent="Entities" index="41" instance=ExtResource("15_vkm1b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.08239, -0.659388, 6.23924)
+
+[node name="BoxSmall2" parent="Entities" index="42" instance=ExtResource("15_vkm1b")]
+transform = Transform3D(0.9725, 0, 0.232902, 0, 1, 0, -0.232902, 0, 0.9725, 0.755014, -0.269163, 10.605)
+
+[node name="BoxSmall3" parent="Entities" index="43" instance=ExtResource("15_vkm1b")]
+transform = Transform3D(0.880425, 0.356917, -0.31219, -0.336395, 0.934136, 0.119282, 0.334202, 0, 0.942502, -0.681477, -0.269163, 9.50831)
+
+[node name="BoxSmall4" parent="Entities" index="44" instance=ExtResource("15_vkm1b")]
+transform = Transform3D(0.70597, 0, 0.708241, -0.216435, 0.952161, 0.215741, -0.67436, -0.305596, 0.672197, 0.0272939, -0.269163, 10.1768)
+
+[node name="CassetCase20" parent="Entities" index="45" instance=ExtResource("5_huofu")]
+transform = Transform3D(0.864538, -0.502567, 0, 0.502567, 0.864538, 0, 0, 0, 1, -1.314, -0.309518, 7.38638)
+
+[node name="BoxMedium8" parent="Entities" index="46" instance=ExtResource("16_ipw43")]
+transform = Transform3D(0.253657, -2.10912e-09, 0.967294, 0.394251, 0.913169, -0.103386, -0.883303, 0.407582, 0.231632, 1.52672, -0.0250437, 3.04137)
+
+[node name="BoxMedium9" parent="Entities" index="47" instance=ExtResource("16_ipw43")]
+transform = Transform3D(-0.999099, 0, -0.0424336, 0.011872, 0.960065, -0.279527, 0.040739, -0.279779, -0.9592, 3.68438, 1.26913, 4.73575)
+
+[node name="BoxMedium10" parent="Entities" index="48" instance=ExtResource("16_ipw43")]
+transform = Transform3D(-0.973984, 0, 0.226617, -0.0507812, 0.97457, -0.218254, -0.220854, -0.224084, -0.949215, 3.2676, -0.0250437, 3.26557)
+
+[node name="Casset17" parent="Entities" index="49" instance=ExtResource("4_vfq1v")]
+transform = Transform3D(0.62497, 0, 0.780649, 0, 1, 0, -0.780649, 0, 0.62497, -4.27955, -1.87236, 10.2678)
+
+[node name="Casset18" parent="Entities" index="50" instance=ExtResource("4_vfq1v")]
+transform = Transform3D(0.952129, 0, -0.305695, 0, 1, 0, 0.305695, 0, 0.952129, -4.62273, -1.87236, 10.2132)
+
+[node name="Casset19" parent="Entities" index="51" instance=ExtResource("4_vfq1v")]
+transform = Transform3D(0.709362, 0, 0.704845, 0, 1, 0, -0.704845, 0, 0.709362, -4.91146, -1.87236, 10.3294)
+
+[node name="Casset20" parent="Entities" index="52" instance=ExtResource("4_vfq1v")]
+transform = Transform3D(0.0325621, 0, 0.99947, 0, 1, 0, -0.99947, 0, 0.0325621, -4.45376, -1.80321, 10.2535)
+
+[node name="Casset21" parent="Entities" index="53" instance=ExtResource("4_vfq1v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.78613, -1.80321, 10.3473)
+
+[node name="Casset22" parent="Entities" index="54" instance=ExtResource("4_vfq1v")]
+transform = Transform3D(0.492013, 0, -0.870588, 0, 1, 0, 0.870588, 0, 0.492013, -4.5697, -1.73406, 10.2668)
+
+[node name="KitchenBoxUp" parent="Entities" index="55" instance=ExtResource("17_nyigl")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.64807, 1.97349, 10.4116)
+
+[node name="KitchenBoxUp2" parent="Entities" index="56" instance=ExtResource("17_nyigl")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.07532, 1.97349, 10.4116)
+
+[node name="KitchenBoxUp3" parent="Entities" index="57" instance=ExtResource("17_nyigl")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.36844, 1.97349, 10.5328)
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="Light" index="0"]
+transform = Transform3D(-0.0204887, 0, 0.99979, 0, 1, 0, -0.99979, 0, -0.0204887, 5.55572, -0.251952, -3.68145)
+spot_range = 13.7366
+spot_angle = 26.0919
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Light" index="1"]
+transform = Transform3D(0.794849, -2.65244e-08, 0.606807, -0.606807, -3.4744e-08, 0.794849, 0, -1, -4.37114e-08, -6.162, 2.73039, -6.84468)
+spot_range = 6.25109
+spot_angle = 27.9991
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Light" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.93762, 0.57401, 7.52062)
+light_color = Color(1, 0.311802, 0.390863, 1)
+light_energy = 9.52
+omni_range = 16.56
+omni_attenuation = 3.365
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Light" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.50153, 1.08826, 6.77694)
+omni_range = 6.042
+omni_attenuation = 4.981
+
+[node name="StoryCasset" parent="Story" index="0" node_paths=PackedStringArray("unlock_door") instance=ExtResource("18_yy0pg")]
+transform = Transform3D(0.126324, -0.68093, -0.721372, 0.989535, 0.035374, 0.139892, -0.0697391, -0.731494, 0.678272, -0.967757, -0.191802, 5.34366)
+number = 3
+take_text = "Almost there, just a little bit left!"
+unlock_door = NodePath("../../Entities/Door2")
+
+[node name="Sprite3D" parent="Story/StoryCasset" index="1"]
+frame = 5
+
+[node name="StaticMessageTrigger" parent="MessageTriggers" index="0" instance=ExtResource("18_3sqbc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.73544, -1.9338, -7.72091)
+text = "WTF?"
+
+[node name="StaticMessageTrigger2" parent="MessageTriggers" index="1" instance=ExtResource("18_3sqbc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.47217, 0.02862, 0.639857)
+text = "Just want to get through this as quickly as possible..."
+
+[node name="DoorStoryMessageTrigger" parent="MessageTriggers" index="2" node_paths=PackedStringArray("parent_door_interactor") instance=ExtResource("19_3sqbc")]
+parent_door_interactor = NodePath("../../Entities/Door2")
+text = "There is something wrong with this house"
+closed_signal = false
+hovered_signal = false
+unhovered_signal = false
+
+[editable path="Story/StoryCasset"]

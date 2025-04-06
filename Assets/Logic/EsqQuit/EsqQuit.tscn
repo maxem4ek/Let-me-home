@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://iu2wiiagulju"]
+
+[ext_resource type="Script" uid="uid://c8yalw0k0oysj" path="res://Assets/Modules/Logic/EsqQuit/EsqQuit.gd" id="1_7oji5"]
+
+[node name="EsqQuit" type="Node"]
+script = ExtResource("1_7oji5")
