@@ -75,7 +75,6 @@ animation_player_story = NodePath("../../UI/PlayerUI/PlayerStoryMessage/Animatio
 animation_player_system = NodePath("../../UI/PlayerUI/PlayerSystemMessage/AnimationPlayerSystem")
 
 [node name="EsqQuit" parent="Systems" instance=ExtResource("3_ygaiq")]
-enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Systems"]
 environment = ExtResource("16_7n1ip")

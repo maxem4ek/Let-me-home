@@ -4,7 +4,6 @@ var playerUI : Control
 var start_screen : Control
 var start_screen_camera : Camera3D
 var end_screen : Control
-var esq_quit : EsqQuit
 
 func init_game():
 	randomize()
