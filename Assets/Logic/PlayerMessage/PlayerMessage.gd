@@ -6,19 +6,14 @@ class_name PlayerMessage
 @export var animation_player_story : AnimationPlayer
 @export var animation_player_system : AnimationPlayer
 
-var story_queue : Array[String] = []
-
 func _ready() -> void:
 	PlayerStory.player_message = self
 
-func _process(delta: float) -> void:
-	if !animation_player_story.is_playing():
-		if !story_queue.is_empty():
-			story_label.text = story_queue.pop_front()
-			animation_player_story.play("story_run_text")
-
 func get_story_message(text : String):
-	story_queue.append(text)
+	if animation_player_story.is_playing():
+		animation_player_story.stop()
+	animation_player_story.play("story_run_text")
+	story_label.text = text
 
 func get_system_message(text : String):
 	system_label.visible = true

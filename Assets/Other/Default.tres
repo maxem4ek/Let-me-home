@@ -1,5 +1,4 @@
 [gd_resource type="Environment" format=3 uid="uid://cfee43vrcqowv"]
 
 [resource]
-background_energy_multiplier = 0.2
-tonemap_mode = 3
+background_energy_multiplier = 0.25

@@ -41,7 +41,7 @@ mouse_filter = 2
 script = ExtResource("4_g2icf")
 
 [node name="AnimationPlayerStory" parent="UI/PlayerUI/PlayerStoryMessage" index="0"]
-speed_scale = 1.25
+speed_scale = 0.75
 
 [node name="Systems" type="Node" parent="."]
 

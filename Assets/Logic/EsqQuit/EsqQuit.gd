@@ -4,7 +4,7 @@ class_name EsqQuit
 @export var enabled : bool
 
 func _ready() -> void:
-	Game.esq_quit = self
+	pass
 
 func _process(delta: float) -> void:
 	if enabled:

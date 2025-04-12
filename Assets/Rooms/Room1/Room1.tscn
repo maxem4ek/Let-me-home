@@ -43,6 +43,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.528
 
 [node name="KitchenBoxDown" parent="Entities" index="1" instance=ExtResource("4_pthxi")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.80628, -1.20402, 0.344131)
+locked = false
 
 [node name="KitchenBoxDown2" parent="Entities" index="2" instance=ExtResource("4_pthxi")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.06699, -1.20402, 0.388328)
